@@ -1,0 +1,13 @@
+[package]
+name = "rnapykin"
+version = "0.2.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "rnapykin"
+crate-type = ["cdylib"]
+
+[dependencies]
+rnapkin = "0.3.9"
+pyo3 = "0.18.3"
