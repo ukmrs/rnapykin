@@ -35,10 +35,10 @@ impl Args {
 /// themes: dark, bright, white, black
 /// angle: rotation of the drawing in degrees
 /// bgopacity: background opacity
+/// my: y mirror or horizontal flip
 /// mx: x mirror or vertical flip
-/// yx: y mirror or horizontal flip
 #[pyfunction]
-fn imagine(
+fn rna2svg(
     rna: String,
     theme: String,
     angle: f64,
@@ -123,6 +123,6 @@ fn imagine(
 /// A Python module implemented in Rust.
 #[pymodule]
 fn rnapykin(_py: Python, m: &PyModule) -> PyResult<()> {
-    m.add_function(wrap_pyfunction!(imagine, m)?)?;
+    m.add_function(wrap_pyfunction!(rna2svg, m)?)?;
     Ok(())
 }
